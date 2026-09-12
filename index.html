@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags to prevent HTML caching -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Certificate Verification Portal - MNNIT Allahabad</title>
-    
-    <!-- Dynamic Script/Style Loader for Cache Busting -->
+    <title>MNNIT Certificate Verification Portal</title>
+
+    <!-- Cache-Busting Script Loader -->
     <script>
         (function() {
-            var version = new Date().getTime(); // Generates a unique timestamp
+            var version = new Date().getTime(); 
             
-            // Load CSS
             var link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = 'style.css?v=' + version;
             document.head.appendChild(link);
             
-            // Load Config JS
             var configScript = document.createElement('script');
             configScript.src = 'config.js?v=' + version;
             document.head.appendChild(configScript);
             
-            // Load Main Script JS (Ensure it loads after config)
             configScript.onload = function() {
                 var mainScript = document.createElement('script');
                 mainScript.src = 'script.js?v=' + version;
@@ -34,20 +30,29 @@
         })();
     </script>
 </head>
-<body>
 
-    <div class="header">
-        <img class="logomnnit" src="https://lh3.googleusercontent.com/d/1UJFHHnk_l38GYoHqhiaC7zXp21r0VJKz" alt="MNNIT Logo">
+<body>
+    <!-- Header --> 
+    <div class="header" id="header">
+        <!-- Left Logo (MNNIT) -->
+        <img class="logo" src="https://lh3.googleusercontent.com/d/1uLcGZj-m_R4fj0hGs8u-WDtsU4NRDNap" alt="MNNIT Logo">
+
+        <!-- Dynamic Event Title -->
         <div class="title">
             <h1>Certificate Verification Portal</h1>
-            <p>ISEA Phase-III  | MNNIT Allahabad</p>
+            <p id="eventTitle">ISEA Phase-III & MNNIT Allahabad</p>
+            <p id="eventSubTitle">Select an event below to verify</p>
         </div>
-        <img class="logoisea" src="https://lh3.googleusercontent.com/d/156kiYigy9ZZmAzayeQeVfAPzYOKhXy0P" alt="ISEA Logo">
-    </div>
 
+        <!-- Dynamic Event Logo (Right Side) -->
+        <img id="eventLogo" class="logo" src="" style="display:none" alt="Event Logo">
+    </div>  
+
+    <!-- Search Box -->
     <div class="search-box">
-        <h2>Verify Your Certificate</h2>
+        <h2>Verify Your Certificate</h2> 
 
+        <!-- Options are populated automatically by script.js -->
         <select id="eventSelect" onchange="handleEventSelection()">
             <option value="">Select Event / Program</option>
         </select>
@@ -63,13 +68,12 @@
         </button>
     </div>
 
+    <!-- Result Area -->
     <div id="result"></div>
 
+    <!-- Footer -->
     <div class="footer">
-        © 2026 Research & Consultancy MNNIT Allahabad  | ISEA Phase-III  | Principal Investigator Prof. R. S. Yadav
+        © 2026 Department of Computer Science & Engineering | MNNIT Allahabad
     </div>
-
-    <script src="config.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
