@@ -1,9 +1,21 @@
 const PORTAL_CONFIG = {
+    "fup_ngcsp": {
+        title: "Faculty Updation Programme: Next-Generation Cyber Security and Privacy (NGCSP 2026)",
+        logo: "https://lh3.googleusercontent.com/d/1Gb3BDjHimwaItoYwc5Z4aCVxQCUBVAHS", // Replace with ISEA logo ID if needed
+        color: "#004a99",
+        apiUrl: "YOUR_FUP_NGCSP_APPS_SCRIPT_URL_HERE" 
+    },
+    "sample_event": {
+        title: "Sample Verification Program (SVP 2026)",
+        logo: "https://lh3.googleusercontent.com/d/1t701aaqGVYeFNbf2qrF_U0f-S1OqgARd", // Replace with sample logo
+        color: "#8B4513",
+        apiUrl: "YOUR_SAMPLE_APPS_SCRIPT_URL_HERE" 
+    },
     "mhwb": {
         title: "Mental Health & Well-Being (MHWB 2026)",
         logo: "https://lh3.googleusercontent.com/d/1Gb3BDjHimwaItoYwc5Z4aCVxQCUBVAHS",
         color: "#2E7D32",
-        apiUrl: "YOUR_MHWB_APPS_SCRIPT_URL_HERE" // Add real URL here
+        apiUrl: "YOUR_MHWB_APPS_SCRIPT_URL_HERE" 
     },
     "pewp": {
         title: "Pedagogical Excellence & Wellness Program (PEWP 2026)",
@@ -15,12 +27,12 @@ const PORTAL_CONFIG = {
         title: "Research Excellence & Campus Culture Building (RECCB 2026)",
         logo: "https://lh3.googleusercontent.com/d/1t701aaqGVYeFNbf2qrF_U0f-S1OqgARd",
         color: "#606060",
-        apiUrl: "YOUR_RECCB_APPS_SCRIPT_URL_HERE" // Add real URL here
+        apiUrl: "YOUR_RECCB_APPS_SCRIPT_URL_HERE" 
     },
     "smsw": {
         title: "Student Mentoring Skill Workshop (SMSW 2026)",
         logo: "https://lh3.googleusercontent.com/d/1K40v_xuCoqHWpjlKw4PEH0gUB94FitbE",
         color: "#855fec",
-        apiUrl: "YOUR_SMSW_APPS_SCRIPT_URL_HERE" // Add real URL here
+        apiUrl: "YOUR_SMSW_APPS_SCRIPT_URL_HERE" 
     }
 };
