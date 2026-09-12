@@ -18,14 +18,19 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
+    justify-content: center; /* Centers the content if you prefer */
     gap: 20px;
     box-sizing: border-box;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    /* Strict size limits to prevent it from blowing up */
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    flex-shrink: 0; /* Prevents the flexbox from squishing the logo */
 }
 
 .title h1 {
