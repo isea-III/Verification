@@ -32,22 +32,18 @@ body::before {
     padding: 15px 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pushes logos to edges, text to center */
+    justify-content: space-between; /* This is crucial: it pushes the logos to the ends */
     width: 100%;
-    max-width: 800px; /* Wider to accommodate both logos */
-    margin: 0 auto; /* Centers the header on the page */
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    height: 120px; /* Force a strict maximum height for the header */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Force strict logo sizes */
 .logo {
-    height: 80px !important; 
-    width: 80px !important;
-    max-width: 80px !important;
-    max-height: 80px !important;
+    height: 40px !important; 
+    width: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
     object-fit: contain !important; /* Keeps the aspect ratio without stretching */
     flex-shrink: 0 !important; /* Prevents text from squishing the images */
 }
