@@ -39,11 +39,13 @@ body::before {
 
 /* Logo Fix (Combines your 90px height with strict boundaries) */
 .logo {
-    height: 90px;
-    width: auto;
-    max-width: 90px;
-    object-fit: contain;
-    flex-shrink: 0; 
+    height: 60px !important; 
+    width: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    margin-right: 15px; /* Adds a little space between logo and text */
 }
 
 .title {
