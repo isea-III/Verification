@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Certificate Verification Portal - MNNIT Allahabad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img class="logo" src="https://lh3.googleusercontent.com/d/1uLcGZj-m_R4fj0hGs8u-WDtsU4NRDNap" alt="MNNIT Logo">
+        <div class="title">
+            <h1>Certificate Verification Portal</h1>
+            <p>ISEA Phase-III & MNNIT Allahabad</p>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <h2>Verify Your Certificate</h2>
+
+        <select id="eventSelect" onchange="handleEventSelection()">
+            <option value="">Select Event / Program</option>
+        </select>
+
+        <input 
+            type="text" 
+            id="certNo" 
+            placeholder="Enter Certificate Number" 
+            disabled>
+
+        <button onclick="verifyCertificate()">
+            Verify
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="footer">
+        © 2026 Dean (Student Welfare) Office & ISEA Phase-III | MNNIT Allahabad
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
