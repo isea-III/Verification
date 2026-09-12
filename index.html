@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags to prevent HTML caching -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Certificate Verification Portal - MNNIT Allahabad</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Dynamic Script/Style Loader for Cache Busting -->
+    <script>
+        (function() {
+            var version = new Date().getTime(); // Generates a unique timestamp
+            
+            // Load CSS
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'style.css?v=' + version;
+            document.head.appendChild(link);
+            
+            // Load Config JS
+            var configScript = document.createElement('script');
+            configScript.src = 'config.js?v=' + version;
+            document.head.appendChild(configScript);
+            
+            // Load Main Script JS (Ensure it loads after config)
+            configScript.onload = function() {
+                var mainScript = document.createElement('script');
+                mainScript.src = 'script.js?v=' + version;
+                document.head.appendChild(mainScript);
+            };
+        })();
+    </script>
 </head>
 <body>
 
