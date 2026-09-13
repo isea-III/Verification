@@ -1,16 +1,34 @@
-window.addEventListener('DOMContentLoaded', () => {
+// Function to populate the dropdown
+function initializeDropdown() {
     const selectElement = document.getElementById('eventSelect');
     
+    // Safety check to ensure the dropdown exists
+    if (!selectElement) return; 
+
+    // Check if config loaded successfully
     if (typeof PORTAL_CONFIG !== 'undefined') {
+        // Prevent duplicate options if called multiple times
+        selectElement.innerHTML = '<option value="">Select Event / Program</option>';
+
         for (const [key, program] of Object.entries(PORTAL_CONFIG)) {
             const option = document.createElement('option');
             option.value = key;
             option.textContent = program.title;
             selectElement.appendChild(option);
         }
+    } else {
+        console.error("PORTAL_CONFIG not found. Check if config.js is loading correctly.");
     }
-});
+}
 
+// Detect if DOM is already loaded due to dynamic script injection
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeDropdown);
+} else {
+    initializeDropdown(); // Run immediately if DOM is already parsed
+}
+
+// Handle UI updates when the dropdown changes
 function handleEventSelection() {
     const eventKey = document.getElementById("eventSelect").value;
     const certInput = document.getElementById("certNo");
@@ -51,6 +69,7 @@ function handleEventSelection() {
     }
 }
 
+// Perform Verification Fetch
 async function verifyCertificate() {
     const eventKey = document.getElementById("eventSelect").value;
     const certNo = document.getElementById("certNo").value.trim();
@@ -63,7 +82,7 @@ async function verifyCertificate() {
         <div class="verify-card">
             <div class="spinner"></div>
             <h3>Verifying Certificate</h3>
-            <p>Please wait while we check our secure records...</p>
+            <p style="color:#666;">Please wait while we check our secure records...</p>
         </div>
     `;
 
@@ -83,6 +102,7 @@ async function verifyCertificate() {
     }
 }
 
+// Render HTML for results
 function renderResult(data) {
     if (data.found) {
         const timestamp = data.mergeStatus?.split("Timestamp:")[1]?.trim() || "";
