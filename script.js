@@ -123,7 +123,7 @@ function renderResult(data) {
             </table>
             
             <div class="actions">
-                <a class="btn btn-warning" href="https://forms.gle/2Q8RaYBvnz8kz5da9" target="_blank">✏️ Request Correction</a>
+                <a class="btn btn-warning" href="https://forms.gle/xwpJWPuQopETo9US9" target="_blank">✏️ Request Correction</a>
                 ${data.mergedDocId ? `<a class="btn" href="https://drive.google.com/uc?export=download&id=${data.mergedDocId}" target="_blank">📥 Download Certificate</a>` : ''}
             </div>
         </div>
