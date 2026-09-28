@@ -117,7 +117,7 @@ function renderResult(data) {
                 <tr><td>Email</td><td>${data.email || 'N/A'}</td></tr>
                 <tr><td>Department</td><td>${data.department || 'N/A'}</td></tr>
                 <tr><td>Designation</td><td>${data.designation || 'N/A'}</td></tr>
-                <tr><td>Employee ID</td><td>${data.employeeId || 'N/A'}</td></tr>
+                <tr><td>E-ID /E-Topic</td><td>${data.employeeId || 'N/A'}</td></tr>
                 <tr><td>Role</td><td>${data.role || 'N/A'}</td></tr>
                 ${timestamp ? `<tr><td>Created On</td><td>${timestamp}</td></tr>` : ''}
             </table>
